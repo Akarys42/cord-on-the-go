@@ -5,7 +5,12 @@ account_id = "870d596bc7edb180166ec010bbc13185"
 route = ""
 workers_dev = true
 
+vars = { CLIENT_ID = 628997965574438943 }
+
+[env.prod]
+vars = { CLIENT_ID = 881521785747693598 }
+
 [build]
-command = "npm install && npm run build"
+command = "npm run build"
 [build.upload]
 format = "service-worker"

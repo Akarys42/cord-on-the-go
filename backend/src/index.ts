@@ -1,5 +1,14 @@
-import { handleRequest } from './handler'
+import { handleAuthorizeRequest } from './handlers/authorize'
+import { handleCallbackRequest } from './handlers/callback'
 
 addEventListener('fetch', (event) => {
-  event.respondWith(handleRequest(event.request))
+  const path = new URL(event.request.url).pathname
+
+  if (path === "/api/authorize") {
+    event.respondWith(handleAuthorizeRequest(event.request))
+  } else if (path === "/api/callback") {
+    event.respondWith(handleCallbackRequest(event.request))
+  } else {
+    event.respondWith(new Response("Not found", {status: 404}))
+  }
 })

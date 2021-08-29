@@ -9,7 +9,7 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   mode: 'development',
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.tsx', '.js']
   },
   module: {
     rules: [
