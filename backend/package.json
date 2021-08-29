@@ -37,6 +37,7 @@
     "webpack-cli": "^4.7.0"
   },
   "dependencies": {
-    "@tsndr/cloudflare-worker-jwt": "^1.1.2"
+    "@tsndr/cloudflare-worker-jwt": "^1.1.2",
+    "html-loader": "^2.1.2"
   }
 }

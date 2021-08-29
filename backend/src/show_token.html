@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Your token - Cord on the Go!</title>
+
+        <meta name="theme-color" content="#485161">
+    </head>
+
+    <body>
+        <div style="font-family: segoe ui,helvetica,arial,sans-serif">
+            <p>Your token is: <code id="token"></code></p>
+        </div>
+
+        <script>
+            window.onload = function () {
+                document.getElementById("token").innerText = document.cookie
+                    .split('; ')
+                    .find(row => row.startsWith('token='))
+                    .split('=')[1]
+            }
+        </script>
+    </body>
+</html>
